@@ -1,106 +1,168 @@
-#  Shaolin Sushi Project
+# Shaolin Sushi
 
-Shaolin Sushi Web es una plataforma en línea diseñada para mejorar la experiencia del cliente, facilitar la gestión interna del restaurante y aumentar la visibilidad y las ventas. Esta aplicación web permite a los usuarios explorar productos, realizar compras y gestionar el catálogo de productos.
+Shaolin Sushi es una aplicación web de comercio electrónico desarrollada con Python y Django como proyecto académico en Duoc UC para la carrera de Ingeniería en Informática.
 
-<br>
+El sistema simula la plataforma digital de un restaurante de sushi y permite gestionar productos, usuarios, carrito de compras, inventario y registros de compra.
 
-## Tabla de Contenidos
-* Introducción
-* Características
-* Herramientas
-* Funcionalidades
-* Requisitos Tecnológicos
-* Instalación
-* Autores
-* Institución
-* Enlaces
-* Conclusión
+## Descripción del proyecto
 
-<br>
+El objetivo del proyecto fue desarrollar una aplicación web que integrara funcionalidades de catálogo y comercio electrónico con herramientas de administración y gestión de usuarios.
 
-## Introducción
-La implementación de esta página web pretende mejorar la experiencia del cliente, facilitar la gestión interna del restaurante y aumentar la visibilidad y las ventas. Al ofrecer una plataforma en línea accesible y fácil de usar, Shaolin Sushi espera no solo satisfacer las necesidades de sus clientes actuales, sino también atraer a nuevos clientes en un mercado cada vez más competitivo.
+La plataforma permite a los clientes explorar el catálogo de productos, registrarse, iniciar sesión, administrar su perfil, agregar productos a un carrito y completar un proceso de compra.
 
-<br>
+Además, incorpora funcionalidades para administrar los productos disponibles y controlar automáticamente el stock después de cada compra.
 
-## Características del Proyecto
-* **Exploración del Menú**: Los usuarios pueden navegar por las categorías de productos, visualizar descripciones detalladas, precios y opciones personalizables.
-* **Pedidos en Línea**: Los clientes pueden seleccionar productos, agregarlos a un carrito de compras y realizar pedidos directamente desde la plataforma.
-* **Gestión de Cuentas de Usuario**: Los usuarios pueden registrarse, iniciar sesión y gestionar sus perfiles, incluyendo la visualización de historiales de pedidos y opciones de personalización.
-* **Administración de Productos**: Interfaz administrativa para que los empleados del restaurante gestionen el catálogo de productos, actualizando información y disponibilidad de manera eficiente.
-* **Generación de Reportes**: Herramientas integradas para analizar y generar informes sobre ventas, rendimiento de productos y comportamiento del cliente.
+## Funcionalidades principales
 
-<br>
+### Catálogo de productos
 
-## Herramientas Utilizadas
-* **HTML**: Lenguaje de Marcado de Hipertexto
-* **CSS**: Hojas de Estilo en Cascada
-* **JS**: JavaScript
-* **Python**: Lenguaje de Programación Principal
-* **Django**: Framework de Desarrollo Web
-* **SQLite**: Base de Datos para Desarrollo
-* **PostgreSQL**: Base de Datos para Producción
+- Visualización de productos agrupados por categorías.
+- Consulta de información, descripción, precio e imagen de cada producto.
+- Visualización del stock disponible.
+- Vista individual con los detalles de cada producto.
 
-<br>
+### Gestión de productos
 
-## Funcionalidades Principales
-* **Exploración del Menú**: Presentación detallada de los platos ofrecidos, incluyendo descripciones, precios y opciones personalizables.
-* **Pedidos en Línea**: Capacidad para que los clientes seleccionen productos, los agreguen a un carrito de compras y realicen pedidos directamente desde la plataforma.
-* **Gestión de Cuentas de Usuario**: Los usuarios podrán registrarse, iniciar sesión y gestionar sus perfiles, lo que incluye la visualización de historiales de pedidos y opciones de personalización.
-* **Administración de Productos**: Interfaz administrativa para que los empleados del restaurante gestionen el catálogo de productos, actualizando información y disponibilidad de manera eficiente.
-* **Generación de Reportes**: Herramientas integradas para analizar y generar informes sobre ventas, rendimiento de productos y comportamiento del cliente.
+- Creación de nuevos productos.
+- Modificación de productos existentes.
+- Eliminación de productos.
+- Gestión de imágenes.
+- Administración de precios y stock.
+- Asociación de productos con categorías.
 
-<br>
+### Gestión de usuarios
 
-## Requisitos Tecnológicos
-* **Compatibilidad de Navegadores y Dispositivos**: La página web debe ser compatible con los navegadores modernos (Chrome, Firefox, Safari, Edge) y adaptarse a dispositivos móviles y tabletas mediante un diseño responsivo.
-* **Seguridad**: Implementación de medidas robustas de seguridad para proteger los datos personales y transacciones financieras de los clientes.
-* **Cumplimiento Normativo**: El sitio web debe cumplir con todas las regulaciones locales y estándares de la industria relacionados con el comercio electrónico y la protección de datos.
+- Registro de nuevos usuarios.
+- Inicio y cierre de sesión.
+- Gestión de perfiles.
+- Edición de información personal.
+- Historial de compras asociado a cada usuario.
 
-<br>
+### Carrito de compras
+
+- Agregar productos al carrito.
+- Aumentar o disminuir cantidades.
+- Eliminar productos individuales.
+- Vaciar completamente el carrito.
+- Cálculo del total de la compra.
+
+### Proceso de compra
+
+- Selección entre envío a domicilio o retiro.
+- Validación de stock disponible antes de completar la compra.
+- Cálculo del subtotal de los productos.
+- Cálculo de impuestos.
+- Cálculo del costo de envío cuando corresponde.
+- Generación de registros de compra.
+- Almacenamiento del detalle de los productos comprados.
+- Actualización automática del stock después de una compra completada.
+
+## Tecnologías utilizadas
+
+- Python
+- Django 5
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- SQLite
+
+## Estructura general
+
+El proyecto utiliza la estructura tradicional de una aplicación Django.
+
+La aplicación principal, `productos`, contiene la lógica relacionada con:
+
+- Modelos de productos y categorías.
+- Gestión de compras.
+- Carrito de compras.
+- Formularios.
+- Gestión de usuarios.
+- Vistas y navegación.
+- Templates de la interfaz.
+- Archivos estáticos.
+
+Entre los principales modelos utilizados se encuentran:
+
+- `Envoltura`: categorías de productos.
+- `Roll`: productos disponibles en el catálogo.
+- `Boleta`: registro general de una compra.
+- `detalle_boleta`: detalle de los productos asociados a una compra.
 
 ## Instalación
-1. Clonar el proyecto o descargar el archivo comprimido.
-2. Instalar las dependencias del proyecto:
-3. pip install -r requirements.txt
-4. python manage.py makemigrations
-5. python manage.py migrate
-6. python manage.py runserver
-7. Ya puedes ingresar a web: [http://127.0.0.1:8000/]
 
-<br>
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/VixoSix/shaolin-sushi-django.git
+cd shaolin-sushi-django
+```
+
+Crear un entorno virtual:
+
+```bash
+python -m venv .venv
+```
+
+Activarlo en Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+En macOS o Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+Instalar las dependencias:
+
+```bash
+pip install -r requirements.txt
+```
+
+Aplicar las migraciones de la base de datos:
+
+```bash
+python manage.py migrate
+```
+
+Ejecutar el servidor de desarrollo:
+
+```bash
+python manage.py runserver
+```
+
+La aplicación estará disponible en:
+
+```text
+http://127.0.0.1:8000/
+```
+
+## Contexto académico
+
+Shaolin Sushi fue desarrollado como proyecto académico en Duoc UC para la carrera de Ingeniería en Informática.
+
+El proyecto permitió aplicar conocimientos relacionados con:
+
+- Desarrollo backend con Python y Django.
+- Desarrollo de interfaces web.
+- Modelado y persistencia de datos.
+- Autenticación y gestión de usuarios.
+- Formularios y validaciones.
+- Gestión de productos e inventario.
+- Carrito de compras.
+- Procesamiento de compras.
+- Manejo de sesiones.
+- Trabajo colaborativo mediante Git y GitHub.
 
 ## Autores
-* Hubert Huaman
-* Vicente Riquelme
 
-<br>
+- [Hubert Huaman](https://github.com/Hubertjerson)
+- [Vicente Riquelme](https://github.com/VixoSix)
 
 ## Institución
-Este proyecto fue desarrollado en colaboración con Duoc UC en la carrera de Ingeniería en Informática.
 
-Seccion: 014V.
-Profesor: Viviana Soledad Poblete Lopez.
-
-<br>
-
-# Enlaces
-* **Herramientas**:
-	- Bootstrap: [https://getbootstrap.com/]
-	- ChatGPT: [https://chat.openai.com/]
-	- Google Fonts: [https://fonts.google.com/]
-	- Pexels: [https://www.pexels.com/es-es/]
-	- Youtube: [https://www.youtube.com/]
-	- Python: [https://www.python.org/]
-	- Django: [https://www.djangoproject.com/]
-	- SQLite: [https://www.sqlite.org/index.html]
-	- PostgreSQL: [https://www.postgresql.org/]
-* **Institución**:
-	- Duoc UC: [https://www.duoc.cl/]
-	- Carrera: [https://www.duoc.cl/carreras/ingenieria-informatica/]
-
-
-<br>
-
-## Conclusión
-La creación de la página web de Shaolin Sushi ha sido un paso fundamental para modernizar y optimizar la operación del restaurante. Al proporcionar una plataforma digital eficiente y fácil de usar, hemos logrado no solo mejorar la satisfacción del cliente, sino también simplificar la gestión interna. Este proyecto demuestra cómo la tecnología puede ser utilizada para abordar desafíos prácticos en el sector de la hospitalidad, y esperamos que sirva como modelo para futuros desarrollos. Agradecemos a todos los involucrados en este proyecto y a nuestra institución por su continuo apoyo.
+Duoc UC  
+Ingeniería en Informática
